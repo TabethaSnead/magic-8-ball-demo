@@ -22,7 +22,25 @@ const answers = [
 
 const questionInput = document.getElementById('question-input');
 const submitButton = document.getElementById('submit-button');
+const inputResults = document.getElementById('input-results');
+const resetButton = document.getElementById('reset-button');
+const frontImg = document.getElementById('front-img');
+const backImg = document.getElementById('back-img');
+const phase1 = document.getElementById('phase1');
+const phase2 = document.getElementById('phase2');
 
 submitButton.addEventListener('click', () => {
-    console.log('click');
+    togglePhases();
+    const randomi = Math.floor(Math.random() * answers.length);
+    const randomAnswer = answers[randomi];
+    inputResults.textContent = randomAnswer;
+});
+
+function togglePhases() {
+    phase1.classList.toggle('hide');
+    phase2.classList.toggle('hide');
+}
+
+resetButton.addEventListener('click', () => {
+    togglePhases();
 });
