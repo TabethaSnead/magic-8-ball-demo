@@ -29,6 +29,15 @@ const backImg = document.getElementById('back-img');
 const phase1 = document.getElementById('phase1');
 const phase2 = document.getElementById('phase2');
 
+// \*event listener for click for submit button
+
+// hide prompt
+
+// display img
+
+// pick random number of array using array.length
+
+// set <p> to display value of random answer of array
 submitButton.addEventListener('click', () => {
     togglePhases();
     const randomi = Math.floor(Math.random() * answers.length);
@@ -44,3 +53,9 @@ function togglePhases() {
 resetButton.addEventListener('click', () => {
     togglePhases();
 });
+
+// \*reset button
+
+// hides answer of array, img
+
+// shows input, button
