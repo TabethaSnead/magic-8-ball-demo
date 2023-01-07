@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Magic 8 Ball</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Magic 8 Ball</h1>
+        </header>
 
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main>
+            <section>
+                <h3 class="ask-question">Ask the Magic 8 ball any question you have!</h3>
+                <div id="phase1">
+                    <input class="question-input" id="question-input" placeholder="ask away!" />
+                    <button id="submit-button" class="submit-button">Submit</button>
+                    <img
+                        id="front-img"
+                        class="front-img"
+                        type="image"
+                        src="./assets/frontmagic8.png"
+                        alt="the front of a magic 8 ball"
+                    />
+                </div>
+            </section>
+            <section>
+                <div id="phase2" class="hide">
+                    <img
+                        type="image"
+                        src="./assets/magic8.png"
+                        alt="the back of a magic 8 ball"
+                        id="back-img"
+                        class="back-img"
+                    />
+                    <p id="input-results" class="input-results"></p>
+                    <button id="reset-button" class="reset-button">Reset</button>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
